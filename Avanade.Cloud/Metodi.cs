@@ -151,6 +151,14 @@ namespace Avanade.Cloud
 
             return listap;
         }
+        public static void StampaProdottiInLista(List<Products> lista)
+        {
+            foreach (var p in lista)
+            {
+                Console.WriteLine("Prodotto {0}, {1}, Prezzo {2}, Codice {3}", p.id, p.Description, p.Price, p.Code);
+
+            }
+        }
         public static void StampaProdotti(string cs)
         {
             //Visualizzare a video (nella console) la lista dei prodotti

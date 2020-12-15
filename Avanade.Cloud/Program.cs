@@ -28,11 +28,8 @@ namespace Avanade.Cloud
             Console.WriteLine("###################");
             Console.WriteLine("Salvo i prodotti in una lista e la stampo ora: ");
             List<Products> listap = Metodi.SalvaProdotti(connectionString);
-            foreach (var p in listap)
-            {
-                Console.WriteLine("Prodotto {0}, {1}, Prezzo {2}, Codice {3}", p.id, p.Description, p.Price, p.Code);
-
-            }
+            Metodi.StampaProdottiInLista(listap);
+            
 
             Console.WriteLine("###################");
             Console.WriteLine("Questi sono tutti i prodotti nel DB: ");
