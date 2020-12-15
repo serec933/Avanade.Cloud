@@ -10,6 +10,8 @@ namespace Avanade.Cloud
     {
         public static string GetConnectionString()
         {
+            //Chiedere il nome di un database server, il nome del database,
+            //uno username e la password da linea di comando
             Console.WriteLine("Nome server?");
             string server = Console.ReadLine();
             Console.WriteLine("Nome del database a cui accedere?");
@@ -132,9 +134,7 @@ namespace Avanade.Cloud
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = "SELECT * FROM Products_Cusinato";
 
-                //Eseguire Command -> DataReader
                 SqlDataReader reader = command.ExecuteReader();
-                //Leggere i dati
                 while (reader.Read())
                 {
                     Products p = new Products();
@@ -164,9 +164,7 @@ namespace Avanade.Cloud
                 command.CommandType = System.Data.CommandType.Text;
                 command.CommandText = "SELECT * FROM Products_Cusinato";
 
-                //Eseguire Command -> DataReader
                 SqlDataReader reader = command.ExecuteReader();
-                //Leggere i dati
                 while (reader.Read())
                 {
                     Console.WriteLine("{0} - Codice prodotto: {1}, Descrizione: {2}, Prezzo: {3}",
